@@ -1,0 +1,45 @@
+Reactive programming:
+
+a paradigm: A certain way/mindst to solve a problem
+    - Decides which features are available
+    - You need apply the correct mindset to use the paradigm to it fullest
+a way to program, like functional and imperative programming
+
+= Procedural programming
+    - Collection of functions
+    - From top to bottom
+    - Line by Line
+    - hard to maintain
+    - hard to understad
+    - verbose
+    - global state, every function can change it
+    - prone to difficult bugs
+
+= Object oriented programming
+    - localising state and behavior
+    - single responsability principle when designed well
+    - easier to understand
+    - still imperative (flow from function is still the same)
+        - Can be adjused
+    - can still be verbose
+
+= Declarative programming (HTML, SQL, regex , etc)
+    - More like data then code
+    - Tell the computer what we want
+    - Data is self describing
+    - As powerful / weak, depending on the interpreter
+
+= Functional programming
+    - Little state
+    - Few side effects
+    - More expressive then other paradigms
+    - works great with OO
+    - Basis in higher math
+    - Composing functions not objects
+
+= Reactive programming
+    - Streams of events, data and changes
+    - Pipeline transforms the data, not the sources
+    - data flows unidirectionally
+    - subscribe to value, to receive the changes.
+    - avoids callbacks

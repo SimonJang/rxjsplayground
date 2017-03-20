@@ -1,0 +1,6 @@
+// Resources for RxJs
+
+- In the examples are using rxjs 5 (beta at the time 20/03/2017)
+- Source code can be interesting to read
+- Marbles to play around with several operators
+- RxVision playground to play around with Observables, Subscriptions and Subjects

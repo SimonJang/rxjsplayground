@@ -1,0 +1,42 @@
+Core concepts: Push vs Pull
+
+Pull model
+    - Collection / Iterator
+    - Data is just sitting there
+    - Manual processing
+    - Transform the data, pulled from the datasource
+    - The transformed data had no connection to the data datasource
+
+Push model
+    - Observable = Reactive data source, produces data over time
+    - Pipeline to the observable data source and display the data in multiple sources
+    - Unidirectional, getting data from the data source. Entry point to the application
+    - When no state changes, nothing to do
+    - Easy to understand the data flow
+    - Transforming the data is available in the framework
+
+
+Core concepts: Everything is a database
+
+- Every event is a stream of items
+    - Mouse movement events
+    - current user
+    - Web requests
+    - Input boxes
+
+Observable: Can emit values, produces values
+Operators: Manipulates the data stream, returns an observable, chaining of multiple operators
+Subscription: Does something with the data returned by the observable, after being processed with the operators
+Subject: Observable and observer
+Subscriber: Attached to Observable and get notifies when the Observable emits a new value
+    - next: the next value
+    - complete: possible to use a callback then
+    - error: exception handling
+
+
+/// Hot vs Cold Observable
+
+Hot => You will get data from the moment you're connected, but you might have missed historical data.
+        If you're not subscribed, you might never get some of the emitted data
+
+Cold => You will get all the values from start to end. There is no historical data for that subscription

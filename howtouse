@@ -1,0 +1,10 @@
+// To run show a file output in terminal
+// using nodemon
+// You can choose any file you want, just change path below
+
+npm run nodemon build/example_01_observables
+
+// To let gulp task watch file changes 
+// Compiles ES2015 syntax to plain js
+
+gulp watch:scripts
