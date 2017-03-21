@@ -33,4 +33,8 @@ _Rx2.default.Observable.range(1, 10).zip(_Rx2.default.Observable.interval(500), 
     return 'item: ' + left + ', at ' + right * 500;
 }).subscribe((0, _util.createSubscriber)('Showcasing zip operator'));
 
-_Rx2.default.Observable.interval(1000).withLatestFrom(_Rx2.default.Observable.interval(500)).subscribe((0, _util.createSubscriber)('Showcasing withLatestFrom operator'));
+_Rx2.default.Observable.interval(1000).withLatestFrom(_Rx2.default.Observable.interval(500)) // only emits an item when the source emits an item
+.take(10).subscribe((0, _util.createSubscriber)('Showcasing withLatestFrom operator'));
+
+_Rx2.default.Observable.interval(1000).combineLatest(_Rx2.default.Observable.interval(500)) // emits when one of the observables emits a value
+.take(10).subscribe((0, _util.createSubscriber)('Showcasing withLatestFrom operator'));

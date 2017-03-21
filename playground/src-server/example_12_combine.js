@@ -27,6 +27,11 @@ Rx.Observable.range(1, 10)
     .subscribe(createSubscriber('Showcasing zip operator'))
 
 Rx.Observable.interval(1000)
-    .withLatestFrom(Rx.Observable.interval(500))
+    .withLatestFrom(Rx.Observable.interval(500)) // only emits an item when the source emits an item
+    .take(10)
     .subscribe(createSubscriber('Showcasing withLatestFrom operator'))
 
+Rx.Observable.interval(1000)
+    .combineLatest(Rx.Observable.interval(500)) // emits when one of the observables emits a value
+    .take(10)
+    .subscribe(createSubscriber('Showcasing withLatestFrom operator'))
