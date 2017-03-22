@@ -39,4 +39,8 @@ Subscriber: Attached to Observable and get notifies when the Observable emits a 
 Hot => You will get data from the moment you're connected, but you might have missed historical data.
         If you're not subscribed, you might never get some of the emitted data
 
+        Examples: user action events
+
 Cold => You will get all the values from start to end. There is no historical data for that subscription
+
+        Examples: web request action
